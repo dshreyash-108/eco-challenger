@@ -7,6 +7,7 @@ import { SimpleGrid, Image, Flex, Box, Badge, Checkbox } from "@chakra-ui/react"
 import { ArrowRightIcon } from "@chakra-ui/icons";
 import { Stack } from "@chakra-ui/react";
 import SmallCard from "../components/SmallCard";
+import AqiDisplay from "../components/AqiDisplay";
 
 
 const Dashboard = ({ user, setUser }) => {
@@ -75,6 +76,8 @@ const Dashboard = ({ user, setUser }) => {
   return (
     <>
       <Header>{user.username}'s Dashboard!</Header>
+
+      <AqiDisplay/>
 
       <Stack direction="row" spacing={4} align="center" justifyContent={"center"} mt={8} wrap="wrap">
         {cardsContent.map((card, index) => (
