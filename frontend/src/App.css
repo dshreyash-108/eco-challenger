@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imprima&family=Itim&display=swap');
+
+.App {
+  text-align: center;
+  background: #DEEDD2 url('images/Background.png') repeat-x;
+  min-height: 100vh;
+}
+
+#root {
+  background-color: #DEEDD2;
+}
+
+h1 {
+  font-family: 'Itim';
+  text-transform: uppercase;
+  font-size: 90px;
+}
