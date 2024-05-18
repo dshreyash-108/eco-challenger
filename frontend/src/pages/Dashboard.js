@@ -5,12 +5,34 @@ import EcoChallengeDataService from "../services/EcoChallengeService";
 import Intro from "./Intro";
 import { SimpleGrid, Image, Flex, Box, Badge, Checkbox } from "@chakra-ui/react";
 import { ArrowRightIcon } from "@chakra-ui/icons";
+import { Stack } from "@chakra-ui/react";
+import SmallCard from "../components/SmallCard";
+
 
 const Dashboard = ({ user, setUser }) => {
   let navigate = useNavigate();
   const [userInfo, setUserInfo] = useState({});
   const [rank, setRank] = useState("");
   const [pfp, setPfp] = useState(0);
+
+  const cardsContent = [
+    {
+      title: "Tree Planting",
+      description: "Join us in planting trees to make our planet greener."
+    },
+    {
+      title: "Recycling Drives",
+      description: "Participate in our recycling drives to reduce waste."
+    },
+    {
+      title: "Cleanup Events",
+      description: "Help us clean up local parks and beaches parks and beaches. "
+    },
+    {
+      title: "Eco Workshops",
+      description: "Help us clean up local parks and beaches parks and beaches."
+    }
+  ];
 
   const getUser = useCallback(async () => {
     await EcoChallengeDataService.getUser()
@@ -53,6 +75,15 @@ const Dashboard = ({ user, setUser }) => {
   return (
     <>
       <Header>{user.username}'s Dashboard!</Header>
+
+      <Stack direction="row" spacing={4} align="center" justifyContent={"center"} mt={8} wrap="wrap">
+        {cardsContent.map((card, index) => (
+          <SmallCard key={index} title={card.title} description={card.description} />
+        ))}
+      </Stack>
+
+      <br/>
+
       <SimpleGrid columns={2} spacing={10} px={20}>
         <Card>
           <Flex justify={"center"}>
