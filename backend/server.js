@@ -27,7 +27,8 @@ app.use((req, res, next) => {
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: ["eco-challenger.vercel.app"],
+    methods: ["POST", "GET"],
     credentials: true,
   })
 );
