@@ -32,5 +32,8 @@ Built using `React`, `Node.js`, `Express`, `MongoDB`, `Chakra-UI` and authentica
 In `frontend/` run `npm start` and in `backend/` run `nodemon server`
 
 Also I'm keeping my openweathers api key in the code itself for now so that you can access it faster.
+
+You can watch the video demo of working website here: 
+
 [screen-capture.webm](https://github.com/dshreyash-108/eco-challenger/assets/111187008/2da65ff3-ed30-4924-b66c-b3184c74b327)
 
