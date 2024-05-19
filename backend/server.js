@@ -27,7 +27,7 @@ app.use((req, res, next) => {
 
 app.use(
   cors({
-    origin: ["eco-challenger.vercel.app"],
+    origin: ["https://eco-challenger.vercel.app/"],
     methods: ["POST", "GET"],
     credentials: true,
   })
