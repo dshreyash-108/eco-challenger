@@ -30,3 +30,5 @@ Built using `React`, `Node.js`, `Express`, `MongoDB`, `Chakra-UI` and authentica
    ECOCHALLENGE_SESSION_HASH - a random secure string for saving your user sessions
 
 In `frontend/` run `npm start` and in `backend/` run `nodemon server`
+
+Also I'm keeping my openweathers api key in the code itself for now so that you can access it faster.
