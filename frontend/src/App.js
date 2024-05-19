@@ -10,6 +10,7 @@ import Navbar from "./pages/Navbar";
 import JoinTeam from "./pages/JoinTeam";
 import CreateTeam from "./pages/CreateTeam";
 import UserProfile from "./pages/UserProfile";
+import EventDetail from "./pages/EventDetail";
 
 import { Routes, Route } from "react-router-dom";
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/sign-up" element={<SignUp setUser={setUser} user={user} />} />
         <Route path="/log-in" element={<LogIn setUser={setUser} user={user} />} />
         <Route path="/teams/:team_id" element={<Team setUser={setUser} user={user} />} />
+        <Route path="/event/:eventType" element={<EventDetail  setUser={setUser} user={user} />} />
       </Routes>
     </div>
   );

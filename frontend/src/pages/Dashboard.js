@@ -8,7 +8,8 @@ import { ArrowRightIcon } from "@chakra-ui/icons";
 import { Stack } from "@chakra-ui/react";
 import SmallCard from "../components/SmallCard";
 import AqiDisplay from "../components/AqiDisplay";
-
+import { Routes, Route } from "react-router-dom";
+import EventDetail from "./EventDetail"; // Import the new EventDetail component
 
 const Dashboard = ({ user, setUser }) => {
   let navigate = useNavigate();
@@ -19,19 +20,23 @@ const Dashboard = ({ user, setUser }) => {
   const cardsContent = [
     {
       title: "Tree Planting",
-      description: "Join us in planting trees to make our planet greener."
+      description: "Join us in planting trees to make our planet greener.",
+      path: "tree-planting"
     },
     {
       title: "Recycling Drives",
-      description: "Participate in our recycling drives to reduce waste."
+      description: "Participate in our recycling drives to reduce waste.",
+      path: "recycling-drives"
     },
     {
       title: "Cleanup Events",
-      description: "Help us clean up local parks and beaches parks and beaches. "
+      description: "Help us clean up local parks and beaches.",
+      path: "cleanup-events"
     },
     {
       title: "Eco Workshops",
-      description: "Help us clean up local parks and beaches parks and beaches."
+      description: "Join our workshops to learn about sustainable living.",
+      path: "eco-workshops"
     }
   ];
 
@@ -77,15 +82,15 @@ const Dashboard = ({ user, setUser }) => {
     <>
       <Header>{user.username}'s Dashboard!</Header>
 
-      <AqiDisplay/>
+      <AqiDisplay />
 
       <Stack direction="row" spacing={4} align="center" justifyContent={"center"} mt={8} wrap="wrap">
         {cardsContent.map((card, index) => (
-          <SmallCard key={index} title={card.title} description={card.description} />
+          <SmallCard key={index} title={card.title} description={card.description} onClick={() => navigate(`/event/${card.path}`)} />
         ))}
       </Stack>
 
-      <br/>
+      <br />
 
       <SimpleGrid columns={2} spacing={10} px={20}>
         <Card>

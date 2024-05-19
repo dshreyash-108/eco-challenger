@@ -1,9 +1,10 @@
 // src/components/SmallCard.js
 import { Box, Text } from "@chakra-ui/react";
 
-const SmallCard = ({ title, description }) => {
+const SmallCard = ({ title, description, onClick }) => {
   return (
     <Box
+    onClick={onClick}
       borderWidth="1px"
       borderRadius="lg"
       overflow="hidden"
